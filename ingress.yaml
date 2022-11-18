@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-portfolio-ingress
+  namespace: default
+spec:
+  rules:
+  - host: my-db.com
+    http:
+      paths:
+      - path: /my-portfolio
+        pathType: Prefix
+        backend:
+          service:
+            name: my-portfolio
+            port:
+              number: 31000
+      - path: /todo-app
+        pathType: Prefix
+        backend:
+          service:
+            name: todo-app
+            port:
+              number: 32000              
