@@ -19,7 +19,7 @@ spec:
       containers:
       - name: my-portfolio
         image: saurabhkr952/my-portfolio:"0.1.0"-23
-        imagePullPolicy: Always   # mandatory
+        imagePullPolicy: Always  # mandatory
         ports:
         - containerPort: 80
 
@@ -30,14 +30,10 @@ kind: Service
 metadata:
   name: my-portfolio
 spec:
-  type: ClusterIP
-  selector: 
+  selector:
     app: my-portfolio
   ports:
     - protocol: TCP
       port: 31000
       targetPort: 80
-    
-
-
 
