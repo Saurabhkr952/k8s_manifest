@@ -18,7 +18,7 @@ spec:
       - name: regsecret
       containers:
       - name: my-portfolio
-        image: saurabhkr952/my-app:my-portfolio
+        image: saurabhkr952/my-portfolio:1
         imagePullPolicy: Always   # mandatory
         ports:
         - containerPort: 80
